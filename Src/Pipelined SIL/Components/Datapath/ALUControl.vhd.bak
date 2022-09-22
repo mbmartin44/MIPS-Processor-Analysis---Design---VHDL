@@ -1,0 +1,24 @@
+-- Package for use in MIPS Processor Implementation Project
+library IEEE;
+use IEEE.std_logic_1164.all;
+------------------------------------------------------------------
+entity ALUControl is -- 2 to 1 multiplexer
+    port(  
+        func      : in std_logic_vector(5 downto 0);
+        ALUop     : in std_logic_vector(1 downto 0);
+        Operation : out std_logic_vector(3 downto 0)
+    );
+end entity;
+------------------------------------------------------------------
+architecture ALUControl_Arch of ALUControl is
+begin
+
+    Operation(3) <= '0';
+    Operation(2) <= ALUop(0) or (ALUop(1) AND func(1));
+
+    Operation(1) <= (NOT ALUop(1)) or (NOT func(2));
+    Operation(0) <= (func(3) or func(0) AND ALUop(1));
+
+end architecture;
+------------------------------------------------------------------
+-- END OF MUX2 COMPONENT FILE

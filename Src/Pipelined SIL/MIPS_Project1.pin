@@ -1,0 +1,556 @@
+ -- Copyright (C) 2020  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and any partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details, at
+ -- https://fpgasoftware.intel.com/eula.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 1A:       2.5V
+ --                  Bank 1B:       2.5V
+ --                  Bank 2:       2.5V
+ --                  Bank 3:       2.5V
+ --                  Bank 4:       2.5V
+ --                  Bank 5:       2.5V
+ --                  Bank 6:       2.5V
+ --                  Bank 7:       2.5V
+ --                  Bank 8:       2.5V
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
+ --                  or leave it unconnected.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+CHIP  "MIPS_Project1"  ASSIGNED TO AN: 10M50DAF484C7G
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+GND                          : A1        : gnd    :                   :         :           :                
+MEMWB_writeReg_sel[4]        : A2        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData1_probe[7] : A3        : output : 2.5 V             :         : 8         : N              
+WB_writeData[4]              : A4        : output : 2.5 V             :         : 8         : N              
+instructionOUT[29]           : A5        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[21] : A6        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData1_probe[6] : A7        : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A8        :        :                   :         : 7         :                
+instructionDE_readData1_probe[29] : A9        : output : 2.5 V             :         : 7         : N              
+instructionOUT[4]            : A10       : output : 2.5 V             :         : 7         : N              
+MEMWB_dataMemory_out[25]     : A11       : output : 2.5 V             :         : 7         : N              
+MEMWB_dataMemory_out[14]     : A12       : output : 2.5 V             :         : 7         : N              
+instructionOUT[11]           : A13       : output : 2.5 V             :         : 7         : N              
+instructionOUT[19]           : A14       : output : 2.5 V             :         : 7         : N              
+instructionOUT[1]            : A15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A18       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A20       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A21       :        :                   :         : 6         :                
+GND                          : A22       : gnd    :                   :         :           :                
+instructionDE_signExtend_probe[26] : AA1       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA2       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA3       :        :                   :         : 3         :                
+GND                          : AA4       : gnd    :                   :         :           :                
+instructionDE_signExtend_probe[30] : AA5       : output : 2.5 V             :         : 3         : N              
+instructionDE_signExtend_probe[19] : AA6       : output : 2.5 V             :         : 3         : N              
+instructionDE_readData2_probe[11] : AA7       : output : 2.5 V             :         : 3         : N              
+WB_writeData[27]             : AA8       : output : 2.5 V             :         : 3         : N              
+instructionDE_readData1_probe[14] : AA9       : output : 2.5 V             :         : 3         : N              
+WB_writeData[22]             : AA10      : output : 2.5 V             :         : 3         : N              
+WB_writeData[18]             : AA11      : output : 2.5 V             :         : 4         : N              
+WB_writeData[26]             : AA12      : output : 2.5 V             :         : 4         : N              
+instructionDE_signExtend_probe[22] : AA13      : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[5]      : AA14      : output : 2.5 V             :         : 4         : N              
+WB_writeData[3]              : AA15      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[24] : AA16      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[22] : AA17      : output : 2.5 V             :         : 4         : N              
+GND                          : AA18      : gnd    :                   :         :           :                
+instructionDE_readData2_probe[28] : AA19      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[10] : AA20      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5         :                
+instructionOUT[7]            : AA22      : output : 2.5 V             :         : 5         : N              
+GND                          : AB1       : gnd    :                   :         :           :                
+instructionDE_readData1_probe[25] : AB2       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB3       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB4       :        :                   :         : 3         :                
+WB_writeData[31]             : AB5       : output : 2.5 V             :         : 3         : N              
+instructionDE_readData2_probe[23] : AB6       : output : 2.5 V             :         : 3         : N              
+MEMWB_writeReg_sel[3]        : AB7       : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB8       :        :                   :         : 3         :                
+WB_writeData[30]             : AB9       : output : 2.5 V             :         : 3         : N              
+instructionDE_readData2_probe[5] : AB10      : output : 2.5 V             :         : 4         : N              
+WB_writeData[28]             : AB11      : output : 2.5 V             :         : 4         : N              
+WB_writeData[14]             : AB12      : output : 2.5 V             :         : 4         : N              
+WB_writeData[25]             : AB13      : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[30]     : AB14      : output : 2.5 V             :         : 4         : N              
+WB_writeData[11]             : AB15      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[13] : AB16      : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[28]     : AB17      : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 4         :                
+WB_writeData[13]             : AB19      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[1] : AB20      : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[7] : AB21      : output : 2.5 V             :         : 4         : N              
+GND                          : AB22      : gnd    :                   :         :           :                
+instructionDE_readData2_probe[16] : B1        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[17] : B2        : output : 2.5 V             :         : 8         : N              
+instructionOUT[25]           : B3        : output : 2.5 V             :         : 8         : N              
+MEMWB_dataMemory_out[6]      : B4        : output : 2.5 V             :         : 8         : N              
+instructionDE_signExtend_probe[8] : B5        : output : 2.5 V             :         : 8         : N              
+GND                          : B6        : gnd    :                   :         :           :                
+MEMWB_writeReg_sel[1]        : B7        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[6] : B8        : output : 2.5 V             :         : 7         : N              
+GND                          : B9        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
+MEMWB_dataMemory_out[22]     : B11       : output : 2.5 V             :         : 7         : N              
+instructionDE_readData2_probe[8] : B12       : output : 2.5 V             :         : 7         : N              
+GND                          : B13       : gnd    :                   :         :           :                
+instructionDE_signExtend_probe[1] : B14       : output : 2.5 V             :         : 7         : N              
+instructionDE_readData2_probe[3] : B15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
+GND                          : B18       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B19       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B20       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B21       :        :                   :         : 6         :                
+instructionOUT[6]            : B22       : output : 2.5 V             :         : 6         : N              
+instructionDE_readData1_probe[22] : C1        : output : 2.5 V             :         : 1B        : N              
+MEMWB_dataMemory_out[17]     : C2        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
+instructionOUT[14]           : C4        : output : 2.5 V             :         : 8         : N              
+MEMWB_dataMemory_out[19]     : C5        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[4] : C6        : output : 2.5 V             :         : 8         : N              
+MEMWB_writeReg_sel[0]        : C7        : output : 2.5 V             :         : 8         : N              
+forwardAval[1]               : C8        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[27] : C9        : output : 2.5 V             :         : 7         : N              
+MEMWB_dataMemory_out[27]     : C10       : output : 2.5 V             :         : 7         : N              
+instructionDE_signExtend_probe[13] : C11       : output : 2.5 V             :         : 7         : N              
+instructionOUT[8]            : C12       : output : 2.5 V             :         : 7         : N              
+MEMWB_dataMemory_out[23]     : C13       : output : 2.5 V             :         : 7         : N              
+instructionDE_signExtend_probe[3] : C14       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
+instructionOUT[12]           : C19       : output : 2.5 V             :         : 7         : N              
+instructionOUT[13]           : C20       : output : 2.5 V             :         : 6         : N              
+pc_out[7]                    : C21       : output : 2.5 V             :         : 6         : N              
+instructionOUT[26]           : C22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 1B        :                
+GND                          : D4        : gnd    :                   :         :           :                
+MEMWB_dataMemory_out[16]     : D5        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData1_probe[31] : D6        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData1_probe[23] : D7        : output : 2.5 V             :         : 8         : N              
+WB_writeData[12]             : D8        : output : 2.5 V             :         : 8         : N              
+WB_writeData[21]             : D9        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[26] : D10       : output : 2.5 V             :         : 8         : N              
+GND                          : D11       : gnd    :                   :         :           :                
+instructionOUT[20]           : D12       : output : 2.5 V             :         : 7         : N              
+ALU_operation[0]             : D13       : output : 2.5 V             :         : 7         : N              
+MEMWB_dataMemory_out[1]      : D14       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 7         :                
+GND                          : D16       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D17       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D18       :        :                   :         : 6         :                
+instructionOUT[27]           : D19       : output : 2.5 V             :         : 6         : N              
+GND                          : D20       : gnd    :                   :         :           :                
+MEMWB_dataMemory_out[2]      : D21       : output : 2.5 V             :         : 6         : N              
+MEMWB_memToReg               : D22       : output : 2.5 V             :         : 6         : N              
+instructionOUT[9]            : E1        : output : 2.5 V             :         : 1B        : N              
+GND                          : E2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1A        :                
+NC                           : E5        :        :                   :         :           :                
+instructionDE_readData1_probe[16] : E6        : output : 2.5 V             :         : 8         : N              
+GND                          : E7        : gnd    :                   :         :           :                
+instructionOUT[16]           : E8        : output : 2.5 V             :         : 8         : N              
+instructionOUT[5]            : E9        : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[19] : E10       : output : 2.5 V             :         : 8         : N              
+forwardAval[0]               : E11       : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[1] : E12       : output : 2.5 V             :         : 7         : N              
+instructionOUT[3]            : E13       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E16       :        :                   :         : 7         :                
+instructionOUT[30]           : E17       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E18       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E19       :        :                   :         : 6         :                
+MEMWB_dataMemory_out[3]      : E20       : output : 2.5 V             :         : 6         : N              
+ALU_operation[1]             : E21       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[8]      : E22       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[6] : F1        : output : 2.5 V             :         : 1B        : N              
+instructionDE_readData1_probe[0] : F2        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F5        :        :                   :         : 1A        :                
+NC                           : F6        :        :                   :         :           :                
+MEMWB_dataMemory_out[13]     : F7        : output : 2.5 V             :         : 8         : N              
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : F8        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : F9        : power  :                   : 2.5V    : 8         :                
+GND                          : F10       : gnd    :                   :         :           :                
+VCCIO8                       : F11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : F12       : power  :                   : 2.5V    : 7         :                
+GND                          : F13       : gnd    :                   :         :           :                
+VCCIO7                       : F14       : power  :                   : 2.5V    : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F16       :        :                   :         : 7         :                
+instructionOUT[23]           : F17       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[2] : F18       : output : 2.5 V             :         : 6         : N              
+pc_out[23]                   : F19       : output : 2.5 V             :         : 6         : N              
+pc_out[14]                   : F20       : output : 2.5 V             :         : 6         : N              
+stallBit                     : F21       : output : 2.5 V             :         : 6         : N              
+instructionOUT[2]            : F22       : output : 2.5 V             :         : 6         : N              
+instructionDE_readData1_probe[8] : G1        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1A        :                
+ANAIN1                       : G5        :        :                   :         :           :                
+GND                          : G6        : gnd    :                   :         :           :                
+VCCD_PLL3                    : G7        : power  :                   : 1.2V    :           :                
+GND                          : G8        : gnd    :                   :         :           :                
+~ALTERA_nSTATUS~ / RESERVED_INPUT : G9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : G10       : power  :                   : 2.5V    : 8         :                
+VCCIO8                       : G11       : power  :                   : 2.5V    : 8         :                
+VCCIO7                       : G12       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G13       : power  :                   : 2.5V    : 7         :                
+VCCIO7                       : G14       : power  :                   : 2.5V    : 7         :                
+GND                          : G15       : gnd    :                   :         :           :                
+VCCD_PLL2                    : G16       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G17       :        :                   :         : 6         :                
+GND                          : G18       : gnd    :                   :         :           :                
+pc_out[4]                    : G19       : output : 2.5 V             :         : 6         : N              
+pc_out[2]                    : G20       : output : 2.5 V             :         : 6         : N              
+GND                          : G21       : gnd    :                   :         :           :                
+forwardBval[0]               : G22       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1B        :                
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 1A        :                
+REFGND                       : H5        :        :                   :         :           :                
+ADC_VREF                     : H6        :        :                   :         :           :                
+VCCA_ADC                     : H7        : power  :                   : 2.5V    :           :                
+VCCA3                        : H8        : power  :                   : 2.5V    :           :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : H9        : input  : 2.5 V Schmitt Trigger :         : 8         : N              
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : H10       : input  : 2.5 V             :         : 8         : N              
+instructionDE_readData1_probe[30] : H11       : output : 2.5 V             :         : 8         : N              
+instructionDE_readData2_probe[0] : H12       : output : 2.5 V             :         : 7         : N              
+instructionDE_signExtend_probe[12] : H13       : output : 2.5 V             :         : 7         : N              
+instructionOUT[0]            : H14       : output : 2.5 V             :         : 7         : N              
+VCCA2                        : H15       : power  :                   : 2.5V    :           :                
+VCCIO6                       : H16       : power  :                   : 2.5V    : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H17       :        :                   :         : 6         :                
+MEMWB_dataMemory_out[21]     : H18       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H19       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H20       :        :                   :         : 6         :                
+pc_out[5]                    : H21       : output : 2.5 V             :         : 6         : N              
+pc_out[29]                   : H22       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[31]     : J1        : output : 2.5 V             :         : 1B        : N              
+GND                          : J2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J4        :        :                   :         : 1A        :                
+ANAIN2                       : J5        :        :                   :         :           :                
+GND                          : J6        : gnd    :                   :         :           :                
+VCCINT                       : J7        : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 1A        :                
+instructionDE_readData1_probe[19] : J10       : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J11       :        :                   :         : 7         :                
+instructionDE_signExtend_probe[9] : J12       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 7         :                
+instructionOUT[18]           : J14       : output : 2.5 V             :         : 6         : N              
+instructionOUT[17]           : J15       : output : 2.5 V             :         : 6         : N              
+GND                          : J16       : gnd    :                   :         :           :                
+VCCIO6                       : J17       : power  :                   : 2.5V    : 6         :                
+instructionDE_readData1_probe[5] : J18       : output : 2.5 V             :         : 6         : N              
+GND                          : J19       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J20       :        :                   :         : 6         :                
+instructionDE_signExtend_probe[4] : J21       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[0] : J22       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[29] : K1        : output : 2.5 V             :         : 1B        : N              
+MEMWB_dataMemory_out[4]      : K2        : output : 2.5 V             :         : 1B        : N              
+GND                          : K3        : gnd    :                   :         :           :                
+MEMWB_dataMemory_out[9]      : K4        : output : 2.5 V             :         : 1A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 1A        :                
+VCCIO1A                      : K7        : power  :                   : 2.5V    : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K9        :        :                   :         : 1B        :                
+GND                          : K10       : gnd    :                   :         :           :                
+VCC                          : K11       : power  :                   : 1.2V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCC                          : K13       : power  :                   : 1.2V    :           :                
+instructionDE_readData1_probe[4] : K14       : output : 2.5 V             :         : 6         : N              
+instructionOUT[28]           : K15       : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : K16       : power  :                   : 2.5V    : 6         :                
+VCCIO6                       : K17       : power  :                   : 2.5V    : 6         :                
+instructionDE_readData1_probe[2] : K18       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[10]     : K19       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[5] : K20       : output : 2.5 V             :         : 6         : N              
+instructionDE_readData2_probe[15] : K21       : output : 2.5 V             :         : 6         : N              
+pc_out[28]                   : K22       : output : 2.5 V             :         : 6         : N              
+instructionDE_signExtend_probe[16] : L1        : output : 2.5 V             :         : 1B        : N              
+instructionDE_readData1_probe[27] : L2        : output : 2.5 V             :         : 1B        : N              
+DNU                          : L3        :        :                   :         :           :                
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : L4        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
+GND                          : L5        : gnd    :                   :         :           :                
+VCCIO1A                      : L6        : power  :                   : 2.5V    : 1A        :                
+VCCIO1B                      : L7        : power  :                   : 2.5V    : 1B        :                
+instructionDE_readData1_probe[18] : L8        : output : 2.5 V             :         : 1B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L9        :        :                   :         : 1B        :                
+VCC                          : L10       : power  :                   : 1.2V    :           :                
+VCC                          : L11       : power  :                   : 1.2V    :           :                
+VCC                          : L12       : power  :                   : 1.2V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+instructionOUT[24]           : L14       : output : 2.5 V             :         : 6         : N              
+instructionDE_readData2_probe[12] : L15       : output : 2.5 V             :         : 6         : N              
+VCCIO6                       : L16       : power  :                   : 2.5V    : 6         :                
+GND                          : L17       : gnd    :                   :         :           :                
+instructionOUT[10]           : L18       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[29]     : L19       : output : 2.5 V             :         : 6         : N              
+instructionDE_readData2_probe[2] : L20       : output : 2.5 V             :         : 6         : N              
+GND                          : L21       : gnd    :                   :         :           :                
+pc_out[12]                   : L22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M2        :        :                   :         : 2         :                
+instructionDE_readData2_probe[10] : M3        : output : 2.5 V             :         : 1B        : N              
+instructionDE_readData1_probe[26] : M4        : output : 2.5 V             :         : 1B        : N              
+~ALTERA_TDO~                 : M5        : output : 2.5 V             :         : 1B        : N              
+VCCIO1B                      : M6        : power  :                   : 2.5V    : 1B        :                
+GND                          : M7        : gnd    :                   :         :           :                
+clk                          : M8        : input  : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 2         :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCC                          : M11       : power  :                   : 1.2V    :           :                
+VCC                          : M12       : power  :                   : 1.2V    :           :                
+VCC                          : M13       : power  :                   : 1.2V    :           :                
+pc_out[6]                    : M14       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[11]     : M15       : output : 2.5 V             :         : 6         : N              
+GND                          : M16       : gnd    :                   :         :           :                
+VCCIO6                       : M17       : power  :                   : 2.5V    : 6         :                
+MEMWB_dataMemory_out[15]     : M18       : output : 2.5 V             :         : 6         : N              
+GND                          : M19       : gnd    :                   :         :           :                
+MEMWB_dataMemory_out[12]     : M20       : output : 2.5 V             :         : 6         : N              
+pc_out[13]                   : M21       : output : 2.5 V             :         : 5         : N              
+instructionDE_signExtend_probe[14] : M22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
+WB_writeData[17]             : N2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 2         :                
+MEMWB_regWrite               : N4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 2         :                
+VCCIO2                       : N6        : power  :                   : 2.5V    : 2         :                
+VCCIO2                       : N7        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 2         :                
+VCC                          : N10       : power  :                   : 1.2V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCC                          : N12       : power  :                   : 1.2V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+pc_out[3]                    : N14       : output : 2.5 V             :         : 6         : N              
+MEMWB_dataMemory_out[0]      : N15       : output : 2.5 V             :         : 6         : N              
+VCCIO5                       : N16       : power  :                   : 2.5V    : 5         :                
+VCCIO6                       : N17       : power  :                   : 2.5V    : 6         :                
+forwardBval[1]               : N18       : output : 2.5 V             :         : 6         : N              
+instructionOUT[15]           : N19       : output : 2.5 V             :         : 6         : N              
+instructionOUT[31]           : N20       : output : 2.5 V             :         : 6         : N              
+pc_out[10]                   : N21       : output : 2.5 V             :         : 5         : N              
+pc_out[8]                    : N22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
+GND                          : P2        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 2         :                
+instructionDE_readData1_probe[21] : P4        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : P5        :        :                   :         : 2         :                
+GND                          : P6        : gnd    :                   :         :           :                
+VCCIO2                       : P7        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 3         :                
+instructionDE_signExtend_probe[21] : P10       : output : 2.5 V             :         : 3         : N              
+WB_writeData[2]              : P11       : output : 2.5 V             :         : 3         : N              
+WB_writeData[16]             : P12       : output : 2.5 V             :         : 4         : N              
+instructionDE_signExtend_probe[10] : P13       : output : 2.5 V             :         : 4         : N              
+instructionDE_signExtend_probe[7] : P14       : output : 2.5 V             :         : 5         : N              
+ALU_operation[2]             : P15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : P16       : power  :                   : 2.5V    : 5         :                
+GND                          : P17       : gnd    :                   :         :           :                
+pc_out[30]                   : P18       : output : 2.5 V             :         : 5         : N              
+pc_out[26]                   : P19       : output : 2.5 V             :         : 5         : N              
+pc_out[18]                   : P20       : output : 2.5 V             :         : 5         : N              
+instructionDE_readData1_probe[15] : P21       : output : 2.5 V             :         : 5         : N              
+pc_out[17]                   : P22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 2         :                
+VCCIO2                       : R6        : power  :                   : 2.5V    : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 2         :                
+VCCA1                        : R8        : power  :                   : 2.5V    :           :                
+WB_writeData[10]             : R9        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 3         :                
+WB_writeData[6]              : R11       : output : 2.5 V             :         : 3         : N              
+WB_writeData[9]              : R12       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[25] : R13       : output : 2.5 V             :         : 4         : N              
+branchEnable                 : R14       : output : 2.5 V             :         : 5         : N              
+instructionDE_readData1_probe[20] : R15       : output : 2.5 V             :         : 5         : N              
+VCCIO5                       : R16       : power  :                   : 2.5V    : 5         :                
+VCCIO5                       : R17       : power  :                   : 2.5V    : 5         :                
+pc_out[25]                   : R18       : output : 2.5 V             :         : 5         : N              
+GND                          : R19       : gnd    :                   :         :           :                
+pc_out[20]                   : R20       : output : 2.5 V             :         : 5         : N              
+GND                          : R21       : gnd    :                   :         :           :                
+instructionDE_readData1_probe[12] : R22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T1        :        :                   :         : 2         :                
+pc_out[1]                    : T2        : output : 2.5 V             :         : 2         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 2         :                
+GND                          : T4        : gnd    :                   :         :           :                
+instructionDE_signExtend_probe[23] : T5        : output : 2.5 V             :         : 2         : N              
+instructionDE_signExtend_probe[15] : T6        : output : 2.5 V             :         : 2         : N              
+VCCD_PLL1                    : T7        : power  :                   : 1.2V    :           :                
+GND                          : T8        : gnd    :                   :         :           :                
+VCCIO3                       : T9        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T10       : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : T11       : power  :                   : 2.5V    : 3         :                
+VCCIO4                       : T12       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : T13       : power  :                   : 2.5V    : 4         :                
+GND                          : T14       : gnd    :                   :         :           :                
+VCCA4                        : T15       : power  :                   : 2.5V    :           :                
+GND                          : T16       : gnd    :                   :         :           :                
+VCCIO5                       : T17       : power  :                   : 2.5V    : 5         :                
+pc_out[16]                   : T18       : output : 2.5 V             :         : 5         : N              
+pc_out[19]                   : T19       : output : 2.5 V             :         : 5         : N              
+pc_out[11]                   : T20       : output : 2.5 V             :         : 5         : N              
+WB_writeData[20]             : T21       : output : 2.5 V             :         : 5         : N              
+WB_writeData[1]              : T22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : U1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U2        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U5        :        :                   :         : 2         :                
+instructionDE_signExtend_probe[24] : U6        : output : 2.5 V             :         : 3         : N              
+instructionDE_signExtend_probe[25] : U7        : output : 2.5 V             :         : 3         : N              
+VCCIO3                       : U8        : power  :                   : 2.5V    : 3         :                
+VCCIO3                       : U9        : power  :                   : 2.5V    : 3         :                
+GND                          : U10       : gnd    :                   :         :           :                
+VCCIO4                       : U11       : power  :                   : 2.5V    : 4         :                
+VCCIO4                       : U12       : power  :                   : 2.5V    : 4         :                
+GND                          : U13       : gnd    :                   :         :           :                
+VCCIO4                       : U14       : power  :                   : 2.5V    : 4         :                
+instructionDE_readData1_probe[28] : U15       : output : 2.5 V             :         : 4         : N              
+VCCD_PLL4                    : U16       : power  :                   : 1.2V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U17       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : U18       :        :                   :         : 5         :                
+pc_out[27]                   : U19       : output : 2.5 V             :         : 5         : N              
+pc_out[9]                    : U20       : output : 2.5 V             :         : 5         : N              
+pc_out[15]                   : U21       : output : 2.5 V             :         : 5         : N              
+instructionDE_readData2_probe[29] : U22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V1        :        :                   :         : 2         :                
+GND                          : V2        : gnd    :                   :         :           :                
+pc_out[0]                    : V3        : output : 2.5 V             :         : 2         : N              
+instructionDE_signExtend_probe[31] : V4        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V5        :        :                   :         : 3         :                
+GND                          : V6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : V7        :        :                   :         : 3         :                
+instructionDE_signExtend_probe[28] : V8        : output : 2.5 V             :         : 3         : N              
+instructionDE_readData2_probe[30] : V9        : output : 2.5 V             :         : 3         : N              
+WB_writeData[19]             : V10       : output : 2.5 V             :         : 3         : N              
+WB_writeData[0]              : V11       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V12       :        :                   :         : 4         :                
+MEMWB_dataMemory_out[18]     : V13       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[13] : V14       : output : 2.5 V             :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : V15       :        :                   :         : 4         :                
+MEMWB_dataMemory_out[24]     : V16       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[14] : V17       : output : 2.5 V             :         : 4         : N              
+WB_writeData[7]              : V18       : output : 2.5 V             :         : 5         : N              
+GND                          : V19       : gnd    :                   :         :           :                
+pc_out[22]                   : V20       : output : 2.5 V             :         : 5         : N              
+instructionDE_readData2_probe[20] : V21       : output : 2.5 V             :         : 5         : N              
+WB_writeData[15]             : V22       : output : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W1        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W2        :        :                   :         : 2         :                
+instructionDE_signExtend_probe[18] : W3        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W6        :        :                   :         : 3         :                
+instructionDE_readData2_probe[31] : W7        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W10       :        :                   :         : 3         :                
+WB_writeData[5]              : W11       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[17] : W12       : output : 2.5 V             :         : 4         : N              
+WB_writeData[24]             : W13       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[18] : W14       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData2_probe[9] : W15       : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[20]     : W16       : output : 2.5 V             :         : 4         : N              
+WB_writeData[29]             : W17       : output : 2.5 V             :         : 4         : N              
+pc_out[21]                   : W18       : output : 2.5 V             :         : 4         : N              
+pc_out[31]                   : W19       : output : 2.5 V             :         : 5         : N              
+instructionDE_readData1_probe[9] : W20       : output : 2.5 V             :         : 5         : N              
+GND                          : W21       : gnd    :                   :         :           :                
+instructionOUT[21]           : W22       : output : 2.5 V             :         : 5         : N              
+instructionDE_signExtend_probe[27] : Y1        : output : 2.5 V             :         : 3         : N              
+instructionDE_signExtend_probe[17] : Y2        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y3        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y4        :        :                   :         : 3         :                
+instructionDE_signExtend_probe[20] : Y5        : output : 2.5 V             :         : 3         : N              
+MEMWB_writeReg_sel[2]        : Y6        : output : 2.5 V             :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : Y8        :        :                   :         : 3         :                
+GND                          : Y9        : gnd    :                   :         :           :                
+WB_writeData[8]              : Y10       : output : 2.5 V             :         : 3         : N              
+WB_writeData[23]             : Y11       : output : 2.5 V             :         : 4         : N              
+GND                          : Y12       : gnd    :                   :         :           :                
+instructionOUT[22]           : Y13       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[24] : Y14       : output : 2.5 V             :         : 4         : N              
+GND                          : Y15       : gnd    :                   :         :           :                
+instructionDE_readData1_probe[11] : Y16       : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[7]      : Y17       : output : 2.5 V             :         : 4         : N              
+instructionDE_readData1_probe[3] : Y18       : output : 2.5 V             :         : 4         : N              
+pc_out[24]                   : Y19       : output : 2.5 V             :         : 4         : N              
+MEMWB_dataMemory_out[26]     : Y20       : output : 2.5 V             :         : 5         : N              
+ALU_operation[3]             : Y21       : output : 2.5 V             :         : 5         : N              
+instructionDE_signExtend_probe[11] : Y22       : output : 2.5 V             :         : 5         : N              
