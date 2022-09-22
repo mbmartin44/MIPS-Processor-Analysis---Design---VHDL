@@ -1,66 +1,64 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity InstructionMemory_tb is
-end;
+ENTITY InstructionMemory_tb IS
+END;
 
-architecture bench of InstructionMemory_tb is
+ARCHITECTURE bench OF InstructionMemory_tb IS
 
-  component InstructionMemory
-      port (
-      address : in STD_LOGIC_VECTOR (7 DOWNTO 0);
-      clock : in STD_LOGIC;
-      data : in STD_LOGIC_VECTOR (31 DOWNTO 0);
-      wren : in STD_LOGIC;
-      q : out STD_LOGIC_VECTOR (31 DOWNTO 0)
+  COMPONENT InstructionMemory
+    PORT (
+      address : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+      clock : IN STD_LOGIC;
+      data : IN STD_LOGIC_VECTOR (31 DOWNTO 0);
+      wren : IN STD_LOGIC;
+      q : OUT STD_LOGIC_VECTOR (31 DOWNTO 0)
     );
-  end component;
+  END COMPONENT;
 
   -- Clock period
-  constant clk_period : time := 5 ns;
+  CONSTANT clk_period : TIME := 5 ns;
   -- Generics
 
   -- Ports
-  signal address : STD_LOGIC_VECTOR (7 DOWNTO 0) := "00000000";
-  signal clock : STD_LOGIC := '0';
-  signal data : STD_LOGIC_VECTOR (31 DOWNTO 0);
-  signal wren : STD_LOGIC := '0';
-  signal q : STD_LOGIC_VECTOR (31 DOWNTO 0);
+  SIGNAL address : STD_LOGIC_VECTOR (7 DOWNTO 0) := "00000000";
+  SIGNAL clock : STD_LOGIC := '0';
+  SIGNAL data : STD_LOGIC_VECTOR (31 DOWNTO 0);
+  SIGNAL wren : STD_LOGIC := '0';
+  SIGNAL q : STD_LOGIC_VECTOR (31 DOWNTO 0);
 
-begin
+BEGIN
 
   InstructionMemory_inst : InstructionMemory
-    port map (
-      address => address,
-      clock => clock,
-      data => data,
-      wren => wren,
-      q => q
-    );
+  PORT MAP(
+    address => address,
+    clock => clock,
+    data => data,
+    wren => wren,
+    q => q
+  );
+  DUT : PROCESS (ALL)
+  BEGIN
+    clock <= '1';
+    WAIT FOR 10 ns;
+    address <= STD_LOGIC_VECTOR(to_integer(4));
+    clock <= '0';
+    WAIT FOR 10 ns;
+    clock <= '1';
+    WAIT FOR 10 ns;
+    address <= STD_LOGIC_VECTOR(to_integer(8));
+    clock <= '0';
+    WAIT FOR 10 ns;
+    clock <= '1';
+    WAIT;
+  END PROCESS;
+  --   clk_process : process
+  --   begin
+  --   clk <= '1';
+  --   wait for clk_period/2;
+  --   clk <= '0';
+  --   wait for clk_period/2;
+  --   end process clk_process;
 
-
-    DUT : process (all)
-    begin
-       clock <= '1';
-       wait for 10 ns;
-       address <= std_logic_vector(to_integer(4));
-       clock <= '0';
-       wait for 10 ns;
-       clock <= '1';
-       wait for 10 ns;
-       address <= std_logic_vector(to_integer(8));
-       clock <= '0';
-       wait for 10 ns;
-       clock <= '1';
-       wait;
-    end process;
---   clk_process : process
---   begin
---   clk <= '1';
---   wait for clk_period/2;
---   clk <= '0';
---   wait for clk_period/2;
---   end process clk_process;
-
-end;
+END;

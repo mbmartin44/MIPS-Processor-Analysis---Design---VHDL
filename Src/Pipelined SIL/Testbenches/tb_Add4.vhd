@@ -1,47 +1,47 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity Add4_tb is
-end;
+ENTITY Add4_tb IS
+END;
 
-architecture bench of Add4_tb is
+ARCHITECTURE bench OF Add4_tb IS
 
-  component Add4
-      port (
-      ALU_in0 : in std_logic_vector(31 downto 0);
-      ALU_in1 : in std_logic_vector(31 downto 0);
-      ALU_out : out std_logic_vector(31 downto 0);
-      zero : out std_logic
+  COMPONENT Add4
+    PORT (
+      ALU_in0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      ALU_in1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      ALU_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      zero : OUT STD_LOGIC
     );
-  end component;
+  END COMPONENT;
 
   -- Clock period
-  constant clk_period : time := 5 ns;
+  CONSTANT clk_period : TIME := 5 ns;
   -- Generics
 
   -- Ports
-  signal ALU_in0 : std_logic_vector(31 downto 0);
-  signal ALU_in1 : std_logic_vector(31 downto 0);
-  signal ALU_out : std_logic_vector(31 downto 0);
-  signal zero : std_logic;
+  SIGNAL ALU_in0 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL ALU_in1 : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL ALU_out : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL zero : STD_LOGIC;
 
-begin
+BEGIN
 
   Add4_inst : Add4
-    port map (
-      ALU_in0 => ALU_in0,
-      ALU_in1 => ALU_in1,
-      ALU_out => ALU_out,
-      zero => zero
-    );
+  PORT MAP(
+    ALU_in0 => ALU_in0,
+    ALU_in1 => ALU_in1,
+    ALU_out => ALU_out,
+    zero => zero
+  );
 
---   clk_process : process
---   begin
---   clk <= '1';
---   wait for clk_period/2;
---   clk <= '0';
---   wait for clk_period/2;
---   end process clk_process;
+  --   clk_process : process
+  --   begin
+  --   clk <= '1';
+  --   wait for clk_period/2;
+  --   clk <= '0';
+  --   wait for clk_period/2;
+  --   end process clk_process;
 
-end;
+END;

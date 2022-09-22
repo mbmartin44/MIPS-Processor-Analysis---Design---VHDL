@@ -1,44 +1,44 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity PC_tb is
-end;
+ENTITY PC_tb IS
+END;
 
-architecture bench of PC_tb is
+ARCHITECTURE bench OF PC_tb IS
 
-  component PC
-      port (
-      clk : in std_logic;
-      load_address : in std_logic_vector(31 downto 0);
-      current_address : out std_logic_vector(31 downto 0)
+  COMPONENT PC
+    PORT (
+      clk : IN STD_LOGIC;
+      load_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      current_address : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
-  end component;
+  END COMPONENT;
 
   -- Clock period
-  constant clk_period : time := 5 ns;
+  CONSTANT clk_period : TIME := 5 ns;
   -- Generics
 
   -- Ports
-  signal clk : std_logic;
-  signal load_address : std_logic_vector(31 downto 0);
-  signal current_address : std_logic_vector(31 downto 0);
+  SIGNAL clk : STD_LOGIC;
+  SIGNAL load_address : STD_LOGIC_VECTOR(31 DOWNTO 0);
+  SIGNAL current_address : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-begin
+BEGIN
 
   PC_inst : PC
-    port map (
-      clk => clk,
-      load_address => load_address,
-      current_address => current_address
-    );
+  PORT MAP(
+    clk => clk,
+    load_address => load_address,
+    current_address => current_address
+  );
 
---   clk_process : process
---   begin
---   clk <= '1';
---   wait for clk_period/2;
---   clk <= '0';
---   wait for clk_period/2;
---   end process clk_process;
+  --   clk_process : process
+  --   begin
+  --   clk <= '1';
+  --   wait for clk_period/2;
+  --   clk <= '0';
+  --   wait for clk_period/2;
+  --   end process clk_process;
 
-end;
+END;

@@ -1,53 +1,53 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity mux2to1_tb is
-end;
+ENTITY mux2to1_tb IS
+END;
 
-architecture bench of mux2to1_tb is
+ARCHITECTURE bench OF mux2to1_tb IS
 
-  component mux2to1
-      port (
-      A0 : in std_logic_vector(31 downto 0);
-      A1 : in std_logic_vector(31 downto 0);
-      sel : in std_logic;
-      F : out std_logic_vector(31 downto 0)
+  COMPONENT mux2to1
+    PORT (
+      A0 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      A1 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      sel : IN STD_LOGIC;
+      F : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
-  end component;
+  END COMPONENT;
 
   -- Clock period
-  constant clk_period : time := 5 ns;
+  CONSTANT clk_period : TIME := 5 ns;
   -- Generics
 
   -- Ports
-  signal A0 : std_logic_vector(31 downto 0) := (others =>'1');
-  signal A1 : std_logic_vector(31 downto 0) := (others=>'0');
-  signal sel : std_logic := '1';
-  signal F : std_logic_vector(31 downto 0);
+  SIGNAL A0 : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '1');
+  SIGNAL A1 : STD_LOGIC_VECTOR(31 DOWNTO 0) := (OTHERS => '0');
+  SIGNAL sel : STD_LOGIC := '1';
+  SIGNAL F : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-begin
+BEGIN
 
   mux2to1_inst : mux2to1
-    port map (
-      A0 => A0,
-      A1 => A1,
-      sel => sel,
-      F => F
-    );
+  PORT MAP(
+    A0 => A0,
+    A1 => A1,
+    sel => sel,
+    F => F
+  );
 
-DUT: process
-begin
-    wait for 10 ns;
+  DUT : PROCESS
+  BEGIN
+    WAIT FOR 10 ns;
     sel <= '0';
-    wait;
-end process;
---   clk_process : process
---   begin
---   clk <= '1';
---   wait for clk_period/2;
---   clk <= '0';
---   wait for clk_period/2;
---   end process clk_process;
+    WAIT;
+  END PROCESS;
+  --   clk_process : process
+  --   begin
+  --   clk <= '1';
+  --   wait for clk_period/2;
+  --   clk <= '0';
+  --   wait for clk_period/2;
+  --   end process clk_process;
 
-end bench;
+END bench;

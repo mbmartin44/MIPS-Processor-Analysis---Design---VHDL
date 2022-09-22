@@ -1,73 +1,73 @@
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
 
-entity control_tb is
-end;
+ENTITY control_tb IS
+END;
 
-architecture bench of control_tb is
+ARCHITECTURE bench OF control_tb IS
 
-  component control
-      port (
-      opcode : in std_logic_vector(5 downto 0);
-      RegDst : out std_logic;
-      Branch : out std_logic;
-      MemRead : out std_logic;
-      MemWrite : out std_logic;
-      MemtoReg : out std_logic;
-      ALUOp : out std_logic_vector(1 downto 0);
-      ALUSrc : out std_logic;
-      RegWrite : out std_logic
+  COMPONENT control
+    PORT (
+      opcode : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+      RegDst : OUT STD_LOGIC;
+      Branch : OUT STD_LOGIC;
+      MemRead : OUT STD_LOGIC;
+      MemWrite : OUT STD_LOGIC;
+      MemtoReg : OUT STD_LOGIC;
+      ALUOp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+      ALUSrc : OUT STD_LOGIC;
+      RegWrite : OUT STD_LOGIC
     );
-  end component;
+  END COMPONENT;
 
   -- Clock period
-  constant clk_period : time := 5 ns;
+  CONSTANT clk_period : TIME := 5 ns;
   -- Generics
 
   -- Ports
-  signal opcode : std_logic_vector(5 downto 0);
-  signal RegDst : std_logic;
-  signal Branch : std_logic;
-  signal MemRead : std_logic;
-  signal MemWrite : std_logic;
-  signal MemtoReg : std_logic;
-  signal ALUOp : std_logic_vector(1 downto 0);
-  signal ALUSrc : std_logic;
-  signal RegWrite : std_logic;
+  SIGNAL opcode : STD_LOGIC_VECTOR(5 DOWNTO 0);
+  SIGNAL RegDst : STD_LOGIC;
+  SIGNAL Branch : STD_LOGIC;
+  SIGNAL MemRead : STD_LOGIC;
+  SIGNAL MemWrite : STD_LOGIC;
+  SIGNAL MemtoReg : STD_LOGIC;
+  SIGNAL ALUOp : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  SIGNAL ALUSrc : STD_LOGIC;
+  SIGNAL RegWrite : STD_LOGIC;
 
-begin
+BEGIN
 
   control_inst : control
-    port map (
-      opcode => opcode,
-      RegDst => RegDst,
-      Branch => Branch,
-      MemRead => MemRead,
-      MemWrite => MemWrite,
-      MemtoReg => MemtoReg,
-      ALUOp => ALUOp,
-      ALUSrc => ALUSrc,
-      RegWrite => RegWrite
-    );
+  PORT MAP(
+    opcode => opcode,
+    RegDst => RegDst,
+    Branch => Branch,
+    MemRead => MemRead,
+    MemWrite => MemWrite,
+    MemtoReg => MemtoReg,
+    ALUOp => ALUOp,
+    ALUSrc => ALUSrc,
+    RegWrite => RegWrite
+  );
 
-DUT: process
-begin
+  DUT : PROCESS
+  BEGIN
     opcode <= "00000";
-    wait for 10 ns;
+    WAIT FOR 10 ns;
     opcode <= "100011";
-    wait for 10 ns;
+    WAIT FOR 10 ns;
     opcode <= "101011";
-    wait for 10 ns;
+    WAIT FOR 10 ns;
     opcode <= "000100";
-    wait;
-end process;
---   clk_process : process
---   begin
---   clk <= '1';
---   wait for clk_period/2;
---   clk <= '0';
---   wait for clk_period/2;
---   end process clk_process;
+    WAIT;
+  END PROCESS;
+  --   clk_process : process
+  --   begin
+  --   clk <= '1';
+  --   wait for clk_period/2;
+  --   clk <= '0';
+  --   wait for clk_period/2;
+  --   end process clk_process;
 
-end bench;
+END bench;
